@@ -1,0 +1,27 @@
+{
+    "name": "milypoint/urlshortelerclient",
+    "description": "Client for url shortener https://github.com/milypoint/urlshortener",
+    "type": "package",
+    "require": {
+        "guzzlehttp/guzzle": "^6.5",
+        "ext-json": "*"
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        }
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Andrii Tokar",
+            "email": "milypointo@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "milypoint\\urlshortelerclient\\": "src"
+        }
+    }
+}
