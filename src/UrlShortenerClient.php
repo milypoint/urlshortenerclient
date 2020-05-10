@@ -7,29 +7,15 @@ use GuzzleHttp\Exception\ClientException;
 
 class UrlShortenerClient
 {
-    private $_attributes = [];
+    /**
+     * @var string
+     */
+    public $base_uri = 'http://urlshortener.local';
 
-    public function __set($name, $value)
-    {
-        $this->_attributes[$name] = $value;
-    }
-
-    public function __get($name)
-    {
-        return $this->_attributes[$name];
-    }
-
-    public function __construct($params=[])
-    {
-        $this->base_uri = 'http://urlshortener.local';
-        $this->timeout = 10.0;
-
-        foreach ($params as $key => $value) {
-            if (array_key_exists($key, $this->_attributes)) {
-                $this->$key = $value;
-            }
-        }
-    }
+    /**
+     * @var float
+     */
+    public $timeout = 10.0;
 
     /**
      * @param string $url
